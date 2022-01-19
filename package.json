@@ -1,0 +1,40 @@
+{
+  "name": "portfolio",
+  "private": true,
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "og:img": "node scripts/index.js",
+    "analyze": "ANALYZE=true yarn build"
+  },
+  "dependencies": {
+    "@next/bundle-analyzer": "^12.0.7",
+    "@radix-ui/react-dropdown-menu": "^0.1.4",
+    "@radix-ui/react-icons": "^1.0.3",
+    "@types/nprogress": "^0.2.0",
+    "classnames": "^2.3.1",
+    "next": "12.0.8",
+    "nprogress": "^0.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sass": "^1.47.0"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.8",
+    "@types/react": "17.0.38",
+    "autoprefixer": "^10.4.2",
+    "eslint": "8.6.0",
+    "eslint-config-next": "12.0.8",
+    "eslint-config-prettier": "^8.3.0",
+    "postcss": "^8.4.5",
+    "prettier": "^2.5.1",
+    "tailwindcss": "^3.0.12",
+    "typescript": "4.5.4"
+  }
+}
