@@ -137,7 +137,7 @@ export default function Home() {
             ))}
         </div>
       </div>
-      <div className="px-4 sm:px-6 md:px-16 py-20 bg-white flex items-center justify-center flex-col">
+      <div className="mx-4 sm:mx-6 md:mx-16 py-20  border-b border-gray-100 bg-white flex items-center justify-center flex-col">
         <h2 className="tracking-tight font-extrabold text-gray-900 text-4xl">
           Do you want to join us?
         </h2>
@@ -160,7 +160,7 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="px-4 sm:px-6 md:px-16 lg:pt-8 pb-20 bg-white grid lg:grid-cols-[1fr_2.5fr] gap-12 lg:gap-24">
+      <div className="px-4 sm:px-6 md:px-16 py-20  bg-white grid lg:grid-cols-[1fr_2.5fr] gap-12 lg:gap-24">
         <div>
           <h2 className="tracking-tight font-extrabold text-gray-900 text-4xl text-center lg:text-left">
             Get in touch
