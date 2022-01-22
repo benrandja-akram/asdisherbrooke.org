@@ -10,9 +10,9 @@ import Textarea from 'components/textarea'
 export default function Home() {
   return (
     <>
-      <div className="grid grid-cols-[2fr_1.3fr] gap-x-12 items-center bg-gray-50">
-        <div className="flex-grow space-y-8 pl-16 py-24">
-          <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-3xl md:text-6xl">
+      <div className="grid lg:grid-cols-[2fr_1.3fr] gap-x-12 items-center justify-center lg:justify-start bg-gray-50">
+        <div className="flex flex-col items-center lg:items-start flex-grow space-y-8 lg:pl-16 py-24">
+          <h1 className="tracking-tight text-center lg:text-left font-extrabold text-gray-900 text-5xl md:text-6xl">
             Association de
             <br />
             Sherbrooke pour
@@ -23,7 +23,7 @@ export default function Home() {
               intellectuelle
             </span>
           </h1>
-          <p className="text-lg text-gray-500 max-w-xl">
+          <p className="text-lg text-center lg:text-left text-gray-500 w-full max-w-xl">
             Ipsum commodo consectetur exercitation et incididunt nulla commodo
             dolor aliqua cupidatat laboris velit esse mollit. Sunt duis proident
             quis nostrud. Voluptate excepteur aliquip sunt aute veniam proident
@@ -37,7 +37,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <div className="h-full space-y-6">
+        <div className="hidden lg:block h-full space-y-6">
           <img
             alt=""
             src="https://canalm.vuesetvoix.com/app/uploads/2018/03/shutterstock_527001838-825x550.jpg"
@@ -45,21 +45,22 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="py-24 px-16 grid grid-cols-2 gap-x-16">
-        <div className="flex justify-end">
+      <div className="py-24 px-16 grid lg:grid-cols-2 gap-x-16">
+        <div className="hidden lg:flex justify-end">
           <div>
             <img
               alt=""
               src="https://hizy.org/sn_uploads/article/iStock_73817433_SMALL.jpg?maxh=1520px&maxw=1520px"
-              className="object-cover rounded-2xl max-w-[620px] opacity-80"
+              className="object-cover rounded-2xl w-full max-w-xl"
             />
           </div>
         </div>
-        <div className="divide-y divide-gray-100 space-y-6 max-w-[600px]">
+        <div className="divide-y divide-gray-100 space-y-6 lg:max-w-[600px]">
           <div className="space-y-6">
-            <h1 className="tracking-tight font-extrabold text-gray-900 text-4xl">
+            <h1 className="tracking-tight font-extrabold text-gray-900 text-4xl text-center lg:text-left">
               Our Mission
             </h1>
+
             <p className="text-gray-500 text-lg">
               L{"'"}Association de Sherbrooke pour la déficience intellectuelle
               est une association de parents créée dans le but de promouvoir
@@ -104,18 +105,18 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="px-4 sm:px-6 md:px-16 py-20 bg-gray-50 grid grid-cols-[1fr_2.5fr] gap-24">
+      <div className="px-4 sm:px-6 md:px-16 py-20 bg-gray-50 grid lg:grid-cols-[1fr_2.5fr] gap-12 lg:gap-24">
         <div className="space-y-4">
-          <h2 className="tracking-tight font-extrabold text-gray-900 text-4xl">
+          <h2 className="tracking-tight font-extrabold text-gray-900 text-4xl text-center lg:text-left">
             Meet our leadership
           </h2>
-          <p className="text-gray-500 text-lg">
+          <p className="text-gray-500 text-lg text-center lg:text-left">
             Occaecat labore fugiat cupidatat consequat incididunt nulla
             exercitation ipsum aute pariatur commodo. Qui ullamco ipsum est
             fugiat eiusmod aute elit anim fugiat mollit.
           </p>
         </div>
-        <div className="grid grid-cols-2 2xl:grid-cols-3 gap-12">
+        <div className="grid justify-center sm:justify-start sm:grid-cols-2 2xl:grid-cols-3 gap-6 lg:gap-12">
           {Array(8)
             .fill({})
             .map((_, i) => (
@@ -136,7 +137,7 @@ export default function Home() {
             ))}
         </div>
       </div>
-      <div className="py-20 bg-white flex items-center justify-center flex-col">
+      <div className="px-4 sm:px-6 md:px-16 py-20 bg-white flex items-center justify-center flex-col">
         <h2 className="tracking-tight font-extrabold text-gray-900 text-4xl">
           Do you want to join us?
         </h2>
@@ -144,7 +145,7 @@ export default function Home() {
           Aliqua non eu reprehenderit esse excepteur sint. Aliqua non eu
           reprehenderit esse excepteur sint.
         </p>
-        <div className="space-x-6">
+        <div className="grid sm:grid-cols-2 gap-4 lg:gap-12">
           <Link href="/devenir-membre">
             <a>
               <Button size="large">Devenir un membre</Button>
@@ -159,16 +160,16 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="px-4 sm:px-6 md:px-16 py-20 bg-white grid lg:grid-cols-[1fr_2.5fr] gap-12 lg:gap-24">
+      <div className="px-4 sm:px-6 md:px-16 lg:pt-8 pb-20 bg-white grid lg:grid-cols-[1fr_2.5fr] gap-12 lg:gap-24">
         <div>
-          <h2 className="tracking-tight font-extrabold text-gray-900 text-4xl">
+          <h2 className="tracking-tight font-extrabold text-gray-900 text-4xl text-center lg:text-left">
             Get in touch
           </h2>
-          <p className="text-gray-500 text-lg mt-4">
+          <p className="text-gray-500 text-lg mt-4 text-center lg:text-left">
             Occaecat labore fugiat cupidatat consequat incididunt nulla
             exercitation ipsum aute pariatur commodo.
           </p>
-          <div className="mt-10 space-y-6">
+          <div className="mt-10 space-y-6 text-center lg:text-left">
             <p className="text-gray-500 text-lg">
               Pavilion 2 1308 de Portland Blvd.
               <br />
@@ -176,8 +177,8 @@ export default function Home() {
               <br />
               J1J 1S3
             </p>
-            <div className="space-y-2">
-              <div className="flex items-center space-x-4 text-gray-500">
+            <div className="space-y-2 flex flex-col items-center lg:items-start ">
+              <div className="flex items-center space-x-4 text-gray-500 ">
                 {phone}
                 <a
                   href="tel:(819) 346-2227"
@@ -198,32 +199,34 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <form className="space-y-6">
-          <Input placeholder="Write your name" type="text" title="Name" />
-          <Input placeholder="Write your email" type="text" title="Email" />
-          <Input
-            placeholder="Write your phone number"
-            type="text"
-            title="Phone Number"
-          />
-          <Textarea
-            placeholder="Write your phone message"
-            title="Message"
-            rows={6}
-          />
-          <Button size="large" className=" w-full sm:w-auto">
-            Soumettre
-          </Button>
-        </form>
+        <div className="flex justify-center">
+          <form className="space-y-6 w-full max-w-3xl">
+            <Input placeholder="Write your name" type="text" title="Name" />
+            <Input placeholder="Write your email" type="text" title="Email" />
+            <Input
+              placeholder="Write your phone number"
+              type="text"
+              title="Phone Number"
+            />
+            <Textarea
+              placeholder="Write your phone message"
+              title="Message"
+              rows={6}
+            />
+            <Button size="large" className="w-full sm:w-auto">
+              Soumettre
+            </Button>
+          </form>
+        </div>
       </div>
-      <div className="py-20 flex items-center justify-center flex-col bg-gray-50">
+      <div className="px-4 sm:px-6 md:px-16 py-20 flex items-center justify-center flex-col bg-gray-50">
         <h2 className="tracking-tight font-extrabold text-gray-900 text-4xl mb-12">
           Frequently asked questions
         </h2>
 
-        <div className="w-[824px] max-w-[824px]">
+        <div className="w-full max-w-[824px]">
           <Accordion.Root collapsible type="single">
-            <div className="divide-y divide-gray-100">
+            <div className="divide-y divide-gray-200">
               {Array(5)
                 .fill({})
                 .map((_, i) => (

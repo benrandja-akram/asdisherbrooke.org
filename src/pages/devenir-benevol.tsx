@@ -9,7 +9,7 @@ function BecomeMember({}) {
       <form className="space-y-6 mt-16">
         <Input placeholder="Write your name" type="text" title="Name" />
         <Input placeholder="Write your email" type="text" title="Email" />
-        <Button>Soumettre</Button>
+        <Button className="w-full sm:w-auto">Soumettre</Button>
       </form>
     </>
   )
