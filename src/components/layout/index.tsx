@@ -16,7 +16,12 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
 
   return (
     <div>
-      <header className="sticky top-0 flex items-center justify-between h-16 px-4 sm:px-6 md:px-16 border-b border-gray-100 bg-white z-50">
+      <header
+        className="sticky top-0 flex items-center justify-between h-16 px-4 sm:px-6 md:px-16 border-b border-gray-100  bg-white/90 z-50"
+        style={{
+          backdropFilter: 'saturate(180%) blur(5px)',
+        }}
+      >
         <Link href="/">{logo}</Link>
         <nav className="hidden md:flex items-center justify-between space-x-12">
           <Dropdown.Root>
