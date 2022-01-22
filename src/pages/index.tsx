@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <div className="px-4 sm:px-6 lg:px-0 grid lg:grid-cols-[2fr_1.3fr] gap-x-12 items-center justify-center lg:justify-start bg-gray-50">
-        <div className="flex flex-col items-center lg:items-start flex-grow space-y-8 lg:pl-16 py-24">
+        <div className="flex flex-col items-center lg:items-start flex-grow space-y-8 lg:pl-16 py-12 lg:py-24">
           <h1 className="tracking-tight text-center lg:text-left font-extrabold text-gray-900 text-5xl md:text-6xl">
             Association de
             <br />
@@ -45,7 +45,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="py-24 px-4 sm:px-6 md:px-16 grid lg:grid-cols-2 gap-x-16">
+      <div className="sm:px-6 md:px-16 py-12 lg:py-20 px-4 grid lg:grid-cols-2 gap-x-16">
         <div className="hidden lg:flex justify-end">
           <div>
             <img
@@ -105,7 +105,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="px-4 sm:px-6 md:px-16 py-20 bg-gray-50 grid lg:grid-cols-[1fr_2.5fr] gap-12 lg:gap-24">
+      <div className="px-4 sm:px-6 md:px-16 py-12 lg:py-20 bg-gray-50 grid lg:grid-cols-[1fr_2.5fr] gap-12 lg:gap-24">
         <div className="space-y-4">
           <h2 className="tracking-tight font-extrabold text-gray-900 text-4xl text-center lg:text-left">
             Meet our leadership
@@ -137,15 +137,15 @@ export default function Home() {
             ))}
         </div>
       </div>
-      <div className="mx-4 sm:mx-6 md:mx-16 py-20  border-b border-gray-100 bg-white flex items-center justify-center flex-col">
-        <h2 className="tracking-tight font-extrabold text-gray-900 text-4xl">
+      <div className="mx-4 sm:mx-6 md:mx-16 py-12 lg:py-20 border-b border-gray-100 bg-white flex items-center justify-center flex-col">
+        <h2 className="tracking-tight font-extrabold text-gray-900 text-4xl text-center">
           Do you want to join us?
         </h2>
         <p className="mb-8 mt-2 max-w-[550px] text-center text-gray-600">
           Aliqua non eu reprehenderit esse excepteur sint. Aliqua non eu
           reprehenderit esse excepteur sint.
         </p>
-        <div className="grid sm:grid-cols-2 gap-4 lg:gap-12">
+        <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
           <Link href="/devenir-membre">
             <a>
               <Button size="large">Devenir un membre</Button>
@@ -160,7 +160,7 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="px-4 sm:px-6 md:px-16 py-20  bg-white grid lg:grid-cols-[1fr_2.5fr] gap-12 lg:gap-24">
+      <div className="px-4 sm:px-6 md:px-16 py-12 lg:py-20 bg-white grid lg:grid-cols-[1fr_2.5fr] gap-12 lg:gap-24">
         <div>
           <h2 className="tracking-tight font-extrabold text-gray-900 text-4xl text-center lg:text-left">
             Get in touch
@@ -219,7 +219,7 @@ export default function Home() {
           </form>
         </div>
       </div>
-      <div className="px-4 sm:px-6 md:px-16 py-20 flex items-center justify-center flex-col bg-gray-50">
+      <div className="px-4 sm:px-6 md:px-16 py-12 lg:py-20 flex items-center justify-center flex-col bg-gray-50">
         <h2 className="tracking-tight font-extrabold text-gray-900 text-4xl mb-12">
           Frequently asked questions
         </h2>
