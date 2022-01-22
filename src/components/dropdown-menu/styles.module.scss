@@ -1,0 +1,14 @@
+@keyframes slide {
+  from {
+    transform: scale(0.8) translateY(-8px);
+  }
+  to {
+    transform: none;
+  }
+}
+.content {
+  transform-origin: 50% 0;
+  &[data-state='open'] {
+    animation: slide 0.15s ease-out;
+  }
+}

@@ -5,6 +5,7 @@ import NProgress from 'nprogress'
 
 import 'nprogress/nprogress.css'
 import 'styles/globals.css'
+import Layout from 'components/layout'
 
 NProgress.configure({ showSpinner: false })
 
@@ -33,7 +34,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     }
   }, [router])
 
-  return <Component {...pageProps} />
+  return (
+    <Layout {...(Component as any).layoutProps}>
+      <Component {...pageProps} />
+    </Layout>
+  )
 }
 
 export default MyApp
