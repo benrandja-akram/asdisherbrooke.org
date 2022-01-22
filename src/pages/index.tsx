@@ -10,7 +10,7 @@ import Textarea from 'components/textarea'
 export default function Home() {
   return (
     <>
-      <div className="grid lg:grid-cols-[2fr_1.3fr] gap-x-12 items-center justify-center lg:justify-start bg-gray-50">
+      <div className="px-4 sm:px-6 lg:px-0 grid lg:grid-cols-[2fr_1.3fr] gap-x-12 items-center justify-center lg:justify-start bg-gray-50">
         <div className="flex flex-col items-center lg:items-start flex-grow space-y-8 lg:pl-16 py-24">
           <h1 className="tracking-tight text-center lg:text-left font-extrabold text-gray-900 text-5xl md:text-6xl">
             Association de
@@ -45,7 +45,7 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="py-24 px-16 grid lg:grid-cols-2 gap-x-16">
+      <div className="py-24 px-4 sm:px-6 md:px-16 grid lg:grid-cols-2 gap-x-16">
         <div className="hidden lg:flex justify-end">
           <div>
             <img
