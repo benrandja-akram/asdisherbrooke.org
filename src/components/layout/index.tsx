@@ -1,5 +1,6 @@
 import {
   ChevronDownIcon,
+  Cross2Icon,
   HamburgerMenuIcon,
   Link2Icon,
 } from '@radix-ui/react-icons'
@@ -86,10 +87,17 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
           </a>
         </Link>
 
-        <HamburgerMenuIcon
-          className="w-8 h-8 block md:hidden"
-          onClick={() => setShowMobileMenu(!showMobileMenu)}
-        />
+        {showMobileMenu ? (
+          <Cross2Icon
+            className="w-8 h-8 block md:hidden"
+            onClick={() => setShowMobileMenu(false)}
+          />
+        ) : (
+          <HamburgerMenuIcon
+            className="w-8 h-8 block md:hidden"
+            onClick={() => setShowMobileMenu(true)}
+          />
+        )}
       </header>
       {showMobileMenu && (
         <MobileMenu onClose={() => setShowMobileMenu(false)} />
