@@ -7,17 +7,20 @@ import Button from 'components/button'
 import Dropdown from 'components/dropdown-menu'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import { useState } from 'react'
+import MobileMenu from './mobile-menu'
 
 interface Props {
   variant?: 'default' | 'content'
 }
 const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
-  const router = useRouter()
+  const [showMobileMenu, setShowMobileMenu] = useState(false)
 
+  const router = useRouter()
   return (
     <div>
       <header
-        className="sticky top-0 flex items-center justify-between h-16 px-4 sm:px-6 md:px-16 border-b border-gray-100  bg-white/90 z-50"
+        className="sticky top-0 flex items-center justify-between h-16 px-4 sm:px-6 md:px-16 border-b border-gray-100 bg-white/90 z-40"
         style={{
           backdropFilter: 'saturate(180%) blur(5px)',
         }}
@@ -82,8 +85,15 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
             </Button>
           </a>
         </Link>
-        <HamburgerMenuIcon className="w-8 h-8 block md:hidden" />
+
+        <HamburgerMenuIcon
+          className="w-8 h-8 block md:hidden"
+          onClick={() => setShowMobileMenu(!showMobileMenu)}
+        />
       </header>
+      {showMobileMenu && (
+        <MobileMenu onClose={() => setShowMobileMenu(false)} />
+      )}
       {variant === 'default' && children}
       {variant === 'content' && (
         <article className="w-full py-8 md:py-16 px-4 sm:px-6 md:px-0 mx-auto prose xl:prose-lg prose-img:rounded-2xl prose-img:w-full">
