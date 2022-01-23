@@ -22,7 +22,7 @@ const MobileMenu: React.FC<Props> = ({ onClose }) => {
       ref={ref}
       className="grid fixed top-16 bottom-0 right-0 left-0 bg-white z-50 overflow-y-auto"
     >
-      <div className="w-full h-[1500px] px-6 py-8 ">
+      <div className="w-full px-6 py-8 ">
         <Link href="/devenir-membre">
           <a onClick={onClose} className="block">
             <Button variant="outlined" size="small" className="w-full">
