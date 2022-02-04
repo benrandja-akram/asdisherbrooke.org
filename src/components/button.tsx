@@ -30,12 +30,12 @@ const Button = forwardRef<HTMLButtonElement, Props>(
             'px-3 py-2 rounded': size === 'small',
           },
           {
-            'text-indigo-700 hover:text-white border  border-indigo-600 hover:bg-indigo-600':
+            'text-primary-dark hover:text-white border  border-primary hover:bg-primary':
               variant === 'outlined',
           },
           variant !== 'outlined' && {
-            'text-white bg-indigo-600 hover:bg-indigo-700': color === 'primary',
-            'text-indigo-700 bg-indigo-100 hover:bg-indigo-200':
+            'text-white bg-primary hover:bg-primary-dark': color === 'primary',
+            'text-primary-dark bg-indigo-100 hover:bg-indigo-200':
               color === 'secondary',
           }
         )}

@@ -14,7 +14,7 @@ function NotFound({}) {
         Désolé, nous n{"'"}avons pas pu trouver la page que vous recherchez.
       </p>
       <Link href="/">
-        <a className="text-lg flex items-center space-x-2 text-indigo-600 font-semibold group hover:underline">
+        <a className="text-lg flex items-center space-x-2 text-primary font-semibold group hover:underline">
           <span>Retourner vers l{"'"}acceuil</span>
           <ArrowRightIcon className="group-hover:translate-x-1.5 transition-transform" />
         </a>

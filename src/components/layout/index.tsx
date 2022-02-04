@@ -30,7 +30,7 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
         <nav className="hidden md:flex items-center justify-between space-x-12">
           <Dropdown.Root>
             <Dropdown.Trigger asChild>
-              <a className="flex items-center space-x-2 text-gray-500 hover:text-indigo-700 transition-colors cursor-pointer font-semibold">
+              <a className="flex items-center space-x-2 text-gray-500 hover:text-primary-dark transition-colors cursor-pointer font-semibold">
                 <span>ASDI</span>
                 <ChevronDownIcon />
               </a>
@@ -47,18 +47,18 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
             </Dropdown.Content>
           </Dropdown.Root>
           <Link href="/activities">
-            <a className="flex items-center space-x-2 text-gray-500 hover:text-indigo-700 hover:underline transition-colors cursor-pointer font-semibold">
+            <a className="flex items-center space-x-2 text-gray-500 hover:text-primary-dark hover:underline transition-colors cursor-pointer font-semibold">
               Activitees
             </a>
           </Link>
           <Link href="/activities">
-            <a className="flex items-center space-x-2 text-gray-500 hover:text-indigo-700 hover:underline transition-colors cursor-pointer font-semibold">
+            <a className="flex items-center space-x-2 text-gray-500 hover:text-primary-dark hover:underline transition-colors cursor-pointer font-semibold">
               Contact
             </a>
           </Link>
           <Dropdown.Root>
             <Dropdown.Trigger asChild>
-              <a className="flex items-center space-x-2 text-gray-500 hover:text-indigo-700 transition-colors cursor-pointer font-semibold">
+              <a className="flex items-center space-x-2 text-gray-500 hover:text-primary-dark transition-colors cursor-pointer font-semibold">
                 <span>Plus</span>
                 <ChevronDownIcon />
               </a>

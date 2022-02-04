@@ -17,7 +17,7 @@ export default function Home() {
             <br />
             Sherbrooke pour
             <br />
-            <span className="text-indigo-600 inline-block mt-2">
+            <span className="text-primary inline-block mt-2">
               la déficience
               <br />
               intellectuelle
@@ -131,7 +131,7 @@ export default function Home() {
                 />
                 <div className="space-y-1 font-semibold">
                   <p className="text-lg">Leslie Alexander</p>
-                  <p className="text-indigo-600">Co-Founder / CEO</p>
+                  <p className="text-primary">Co-Founder / CEO</p>
                 </div>
               </div>
             ))}
@@ -182,7 +182,7 @@ export default function Home() {
                 {phone}
                 <a
                   href="tel:(819) 346-2227"
-                  className="font-semibold hover:text-indigo-600 hover:underline"
+                  className="font-semibold hover:text-primary hover:underline"
                 >
                   (819) 346-2227
                 </a>
@@ -191,7 +191,7 @@ export default function Home() {
                 <EnvelopeClosedIcon className="w-5 h-5 fill-gray-300" />
                 <a
                   href="mailto:support@asdi.com"
-                  className="font-semibold hover:text-indigo-600 hover:underline "
+                  className="font-semibold hover:text-primary hover:underline "
                 >
                   support@asdi.com
                 </a>
