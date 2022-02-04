@@ -11,6 +11,7 @@ import Button from 'components/button'
 import Input from 'components/input'
 import Textarea from 'components/textarea'
 import Image from 'next/image'
+import Seo from 'components/seo'
 
 function Member({ name, job }: { name: string; job: string }) {
   return (
@@ -30,6 +31,15 @@ function Member({ name, job }: { name: string; job: string }) {
 export default function Home() {
   return (
     <>
+      <Seo
+        image="https://canalm.vuesetvoix.com/app/uploads/2018/03/shutterstock_527001838-825x550.jpg"
+        description="L’Association de Sherbrooke pour la déficience intellectuelle est
+            une association de parents créée dans le but de promouvoir
+            l’intégration et la participation sociales, de favoriser le
+            bien-être et de faire la promotion des droits des personnes ayant
+            une déficience intellectuelle et de leurs familles."
+        title="ASDI: Association de Sherbrooke pour la déficience intellectuelle"
+      />
       <div className="grid items-center justify-center gap-x-12 bg-gray-50 px-4 sm:px-6 lg:grid-cols-[2fr_1.3fr] lg:justify-start lg:px-0">
         <div className="flex flex-grow flex-col items-center space-y-8 py-12 lg:items-start lg:py-24 lg:pl-16">
           <h1 className="text-center text-5xl font-extrabold tracking-tight text-gray-900 md:text-6xl lg:text-left">
@@ -173,15 +183,21 @@ export default function Home() {
           Tu es à la recherche d’une expérience stimulante et valorisante.
           Joins-toi à nous!
         </p>
-        <div className="grid gap-6 sm:grid-cols-2 lg:gap-8">
+        <div className="grid w-full gap-6 sm:w-auto sm:grid-cols-2 lg:gap-8">
           <Link href="/devenir-membre">
             <a>
-              <Button size="large">Devenir membre</Button>
+              <Button size="large" className="w-full sm:w-auto">
+                Devenir membre
+              </Button>
             </a>
           </Link>
           <Link href="/carriere-devenir-bénévol">
             <a>
-              <Button size="large" color="secondary">
+              <Button
+                size="large"
+                color="secondary"
+                className="w-full sm:w-auto"
+              >
                 Devenir bénévole
               </Button>
             </a>

@@ -23,15 +23,17 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
   const router = useRouter()
   return (
     <div>
-      <div className="relative flex min-h-[48px] flex-col items-center justify-center space-y-2 bg-primary px-4 py-2 text-center font-semibold text-white sm:flex-row sm:space-x-4 sm:space-y-0">
-        <span>Nouvelle instruction concernant la COVID19</span>
-        <Link href="/covid-19">
-          <a className="group inline-flex items-center space-x-1.5 rounded bg-white px-3 py-1 font-semibold tracking-tight text-primary-dark">
-            <span>Plus d{"'"}infos</span>
-            <ArrowRightIcon className="transition-transform group-hover:translate-x-1" />
-          </a>
-        </Link>
-      </div>
+      {!showMobileMenu && (
+        <div className="relative flex min-h-[48px] flex-col items-center justify-center space-y-2 bg-primary px-4 py-2 text-center font-semibold text-white sm:flex-row sm:space-x-4 sm:space-y-0">
+          <span>Nouvelle instruction concernant la COVID19</span>
+          <Link href="/covid-19">
+            <a className="group inline-flex items-center space-x-1.5 rounded bg-white px-3 py-1 font-semibold tracking-tight text-primary-dark">
+              <span>Plus d{"'"}infos</span>
+              <ArrowRightIcon className="transition-transform group-hover:translate-x-1" />
+            </a>
+          </Link>
+        </div>
+      )}
       <header
         className="sticky top-0 z-40 flex h-16 items-center justify-between bg-white/90 px-4 shadow sm:px-6 md:px-16"
         style={{
@@ -39,12 +41,12 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
         }}
       >
         <Link href="/">
-          <a>
+          <a className="inline-flex">
             <Image alt="logo" src="/logo.png" width={81} height={48} />
           </a>
         </Link>
 
-        <nav className="hidden items-center justify-between space-x-12 md:flex">
+        <nav className="xl:space-12 hidden items-center justify-between space-x-6 md:flex">
           <Dropdown.Root>
             <Dropdown.Trigger asChild>
               <a className="flex cursor-pointer items-center space-x-2 font-semibold text-gray-500 transition-colors hover:text-primary-dark">
@@ -118,7 +120,7 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
         </nav>
         <div className="hidden space-x-3 lg:inline-block">
           <Link href="/#contact">
-            <a>
+            <a className="hidden xl:inline">
               <Button variant="link" size="small">
                 Nous contacter
               </Button>
