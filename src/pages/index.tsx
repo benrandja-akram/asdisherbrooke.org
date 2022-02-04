@@ -53,7 +53,7 @@ export default function Home() {
             <Link href="/devenir-membre">
               <a>
                 <Button size="large" className="w-full sm:w-auto">
-                  Devenir member
+                  Devenir membre
                 </Button>
               </a>
             </Link>
@@ -79,7 +79,7 @@ export default function Home() {
         </div>
         <div className="space-y-6 divide-y divide-gray-100 lg:max-w-[600px]">
           <div className="space-y-6">
-            <h1 className="text-center text-4xl font-extrabold tracking-tight text-gray-900 lg:text-left">
+            <h1 className="mt-4  text-center text-4xl font-extrabold tracking-tight text-gray-900 lg:text-left">
               Nos Actions
             </h1>
 
@@ -106,7 +106,7 @@ export default function Home() {
               intellectuelle.
             </p>
           </div>
-          <div className="grid grid-cols-2 pt-6">
+          <div className="grid grid-cols-2 gap-4 pt-6">
             <div className=" space-y-1.5">
               <div className="text-sm font-semibold text-gray-500">
                 Fondé en
@@ -118,7 +118,7 @@ export default function Home() {
               <div className="text-3xl font-extrabold">+350</div>
             </div>
           </div>
-          <div className="grid grid-cols-2 pt-6">
+          <div className="grid grid-cols-2 gap-4 pt-6">
             <div className="space-y-1.5">
               <div className="text-sm font-semibold text-gray-500">
                 Nombres de rencontres annuelles
@@ -127,7 +127,7 @@ export default function Home() {
             </div>
             <div className="space-y-1.5">
               <div className="text-sm font-semibold text-gray-500">
-                Nb de présences annuelles
+                Nombres de présences annuelles
               </div>
               <div className="text-3xl font-extrabold">+11000</div>
             </div>
@@ -136,7 +136,7 @@ export default function Home() {
       </div>
       <div className="grid gap-12 bg-gray-50 px-4 py-12 sm:px-6 md:px-16 lg:grid-cols-[1fr_2.5fr] lg:gap-24 lg:py-20">
         <div className="space-y-4">
-          <h2 className="text-center text-4xl font-extrabold tracking-tight text-gray-900 lg:text-left">
+          <h2 className="mt-4 text-center text-4xl font-extrabold tracking-tight text-gray-900 lg:text-left">
             Notre équipe
           </h2>
           <p className="text-center text-lg text-gray-500 lg:text-left">
@@ -145,7 +145,7 @@ export default function Home() {
             soutenir.
           </p>
           <Link href={'/team'}>
-            <a className="group mt-8 flex items-center space-x-1.5 font-semibold text-primary-dark hover:underline">
+            <a className="group flex items-center space-x-1.5 font-semibold text-primary-dark hover:underline">
               <span>Voir notre équipe au complet</span>
               <ArrowRightIcon
                 width={22}
@@ -176,7 +176,7 @@ export default function Home() {
               <Button size="large">Devenir membre</Button>
             </a>
           </Link>
-          <Link href="/devenir-benevol">
+          <Link href="/carriere-devenir-bénévol">
             <a>
               <Button size="large" color="secondary">
                 Devenir bénévole

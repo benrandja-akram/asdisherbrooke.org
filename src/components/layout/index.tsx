@@ -35,7 +35,7 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
         </div>
       </div>
       <header
-        className="sticky top-0 z-40 flex h-16 items-center justify-between border-b border-gray-100 bg-white/90 px-4 sm:px-6 md:px-16"
+        className="sticky top-0 z-40 flex h-16 items-center justify-between bg-white/90 px-4 shadow sm:px-6 md:px-16"
         style={{
           backdropFilter: 'saturate(180%) blur(5px)',
         }}
@@ -50,35 +50,43 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
               </a>
             </Dropdown.Trigger>
             <Dropdown.Content sideOffset={16} align="center">
-              <Dropdown.Item onSelect={() => router.push('/asdi')}>
+              <Dropdown.Item onSelect={() => router.push('/asdi-historique')}>
                 <Link2Icon className="h-3.5 w-3.5 opacity-75" />
-                <span>Missions</span>
+                <span>Historique</span>
               </Dropdown.Item>
-              <Dropdown.Item onSelect={() => router.push('/asdi/infos')}>
+              <Dropdown.Item onSelect={() => router.push('/asdi-mission')}>
                 <Link2Icon className="h-3.5 w-3.5 opacity-75" />
-                <span>Plus d{"'"}infos</span>
+                <span>Mission</span>
+              </Dropdown.Item>
+              <Dropdown.Item onSelect={() => router.push('/asdi-équipe')}>
+                <Link2Icon className="h-3.5 w-3.5 opacity-75" />
+                <span>Équipe</span>
               </Dropdown.Item>
             </Dropdown.Content>
           </Dropdown.Root>
           <Dropdown.Root>
             <Dropdown.Trigger asChild>
               <a className="flex cursor-pointer items-center space-x-2 font-semibold text-gray-500 transition-colors hover:text-primary-dark">
-                <span>Carrières</span>
+                <span>Carrière</span>
                 <ChevronDownIcon />
               </a>
             </Dropdown.Trigger>
             <Dropdown.Content sideOffset={16} align="center">
-              <Dropdown.Item onSelect={() => router.push('/asdi')}>
+              <Dropdown.Item
+                onSelect={() => router.push('/carriere-devenir-employé')}
+              >
                 <Link2Icon className="h-3.5 w-3.5 opacity-75" />
-                <span>Missions</span>
+                <span>Devenir Employé</span>
               </Dropdown.Item>
-              <Dropdown.Item onSelect={() => router.push('/asdi/infos')}>
+              <Dropdown.Item
+                onSelect={() => router.push('/carriere-devenir-bénévol')}
+              >
                 <Link2Icon className="h-3.5 w-3.5 opacity-75" />
-                <span>Plus d{"'"}infos</span>
+                <span>Devenir Bénévole</span>
               </Dropdown.Item>
             </Dropdown.Content>
           </Dropdown.Root>
-          <Link href="/activities">
+          <Link href="/activités">
             <a className="flex cursor-pointer items-center space-x-2 font-semibold text-gray-500 transition-colors hover:text-primary-dark hover:underline">
               Activités
             </a>
@@ -87,20 +95,18 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
           <Dropdown.Root>
             <Dropdown.Trigger asChild>
               <a className="flex cursor-pointer items-center space-x-2 font-semibold text-gray-500 transition-colors hover:text-primary-dark">
-                <span>Plus</span>
+                <span>Informations</span>
                 <ChevronDownIcon />
               </a>
             </Dropdown.Trigger>
             <Dropdown.Content sideOffset={16} align="center">
-              <Dropdown.Item onSelect={() => router.push('/infos/defficience')}>
+              <Dropdown.Item
+                onSelect={() => router.push('/infos-déficience-intellectuelle')}
+              >
                 <Link2Icon className="h-3.5 w-3.5 opacity-75" />
-                <span>Qu{"'"}est-ce que la defficience ...</span>
+                <span>La déficience intellectuelle</span>
               </Dropdown.Item>
-              <Dropdown.Item onSelect={() => router.push('/infos/lexique')}>
-                <Link2Icon className="h-3.5 w-3.5 opacity-75" />
-                <span>Lexique</span>
-              </Dropdown.Item>
-              <Dropdown.Item onSelect={() => router.push('/infos/partenaires')}>
+              <Dropdown.Item onSelect={() => router.push('/infos-partenaires')}>
                 <Link2Icon className="h-3.5 w-3.5 opacity-75" />
                 <span>Partenaires</span>
               </Dropdown.Item>
@@ -115,7 +121,7 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
               </Button>
             </a>
           </Link>
-          <Link href="/devenir-membre">
+          <Link href="/dons">
             <a>
               <Button variant="outlined" size="small">
                 Donner à l’ASDI
