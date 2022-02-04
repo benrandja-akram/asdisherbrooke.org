@@ -1,43 +1,65 @@
 /* eslint-disable @next/next/no-img-element */
 import * as Accordion from '@radix-ui/react-accordion'
-import { ChevronDownIcon, EnvelopeClosedIcon } from '@radix-ui/react-icons'
+import {
+  ArrowRightIcon,
+  ChevronDownIcon,
+  EnvelopeClosedIcon,
+} from '@radix-ui/react-icons'
 import Link from 'next/link'
 
 import Button from 'components/button'
 import Input from 'components/input'
 import Textarea from 'components/textarea'
 
+function Member({ name, job }: { name: string; job: string }) {
+  return (
+    <div className="grid grid-cols-[auto_2fr] items-center gap-8">
+      <img
+        className="h-20 w-20 rounded-full"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTghSGsSSG2lZU9fuWAm4vrrmPAV15hrLius3_0Z7C45QrYf17F2x7VzrdT1XVXMV-z4EM&usqp=CAU"
+        alt="user avatar"
+      />
+      <div className="space-y-1 font-semibold">
+        <p className="text-lg">{name}</p>
+        <p className="text-primary">{job}</p>
+      </div>
+    </div>
+  )
+}
 export default function Home() {
   return (
     <>
-      <div className="px-4 sm:px-6 lg:px-0 grid lg:grid-cols-[2fr_1.3fr] gap-x-12 items-center justify-center lg:justify-start bg-gray-50">
-        <div className="flex flex-col items-center lg:items-start flex-grow space-y-8 lg:pl-16 py-12 lg:py-24">
-          <h1 className="tracking-tight text-center lg:text-left font-extrabold text-gray-900 text-5xl md:text-6xl">
+      <div className="grid items-center justify-center gap-x-12 bg-gray-50 px-4 sm:px-6 lg:grid-cols-[2fr_1.3fr] lg:justify-start lg:px-0">
+        <div className="flex flex-grow flex-col items-center space-y-8 py-12 lg:items-start lg:py-24 lg:pl-16">
+          <h1 className="text-center text-5xl font-extrabold tracking-tight text-gray-900 md:text-6xl lg:text-left">
             Association de
             <br />
             Sherbrooke pour
             <br />
-            <span className="text-primary inline-block mt-2">
+            <span className="mt-2 inline-block text-primary">
               la déficience
               <br />
               intellectuelle
             </span>
           </h1>
-          <p className="text-lg text-center lg:text-left text-gray-500 w-full max-w-xl">
-            Ipsum commodo consectetur exercitation et incididunt nulla commodo
-            dolor aliqua cupidatat laboris velit esse mollit. Sunt duis proident
-            quis nostrud. Voluptate excepteur aliquip sunt aute veniam proident
-            duis adipisicing minim amet eu.
+          <p className="w-full max-w-xl text-center text-lg text-gray-500 lg:text-left">
+            L’Association de Sherbrooke pour la déficience intellectuelle est
+            une association de parents créée dans le but de promouvoir
+            l’intégration et la participation sociales, de favoriser le
+            bien-être et de faire la promotion des droits des personnes ayant
+            une déficience intellectuelle et de leurs familles.
           </p>
-          <div>
+          <div className="w-full sm:w-auto">
             <Link href="/devenir-membre">
               <a>
-                <Button size="large">Become Member</Button>
+                <Button size="large" className="w-full sm:w-auto">
+                  Devenir member
+                </Button>
               </a>
             </Link>
           </div>
         </div>
-        <div className="hidden lg:block h-full space-y-6">
+        <div className="hidden h-full space-y-6 lg:block">
           <img
             alt=""
             src="https://canalm.vuesetvoix.com/app/uploads/2018/03/shutterstock_527001838-825x550.jpg"
@@ -45,162 +67,168 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="sm:px-6 md:px-16 py-12 lg:py-20 px-4 grid lg:grid-cols-2 gap-x-16">
-        <div className="hidden lg:flex justify-end">
+      <div className="grid gap-x-16 py-12 px-4 sm:px-6 md:px-16 lg:grid-cols-2 lg:py-20">
+        <div className="hidden justify-end lg:flex">
           <div>
             <img
               alt=""
               src="https://hizy.org/sn_uploads/article/iStock_73817433_SMALL.jpg?maxh=1520px&maxw=1520px"
-              className="object-cover rounded-2xl w-full max-w-xl"
+              className="w-full max-w-xl rounded-2xl object-cover"
             />
           </div>
         </div>
-        <div className="divide-y divide-gray-100 space-y-6 lg:max-w-[600px]">
+        <div className="space-y-6 divide-y divide-gray-100 lg:max-w-[600px]">
           <div className="space-y-6">
-            <h1 className="tracking-tight font-extrabold text-gray-900 text-4xl text-center lg:text-left">
-              Our Mission
+            <h1 className="text-center text-4xl font-extrabold tracking-tight text-gray-900 lg:text-left">
+              Nos Actions
             </h1>
 
-            <p className="text-gray-500 text-lg">
-              L{"'"}Association de Sherbrooke pour la déficience intellectuelle
-              est une association de parents créée dans le but de promouvoir
-              l’intégration et la participation sociales, de favoriser le
-              bien-être et de faire la promotion des droits des personnes ayant
-              une déficience intellectuelle et de leurs familles. En ayant l
-              {"'"}intégration des personnes ayant une déficience intellectuelle
-              au coeur de nos préoccupations, notre travail s{"'"}oriente vers
-              les cinq volets suivants.
+            <p className="text-lg text-gray-500">
+              Depuis plusieurs années, nous soutenons plus de 350 membres actifs
+              vivant avec une déficience intellectuelle. Nous offrons
+              principalement à nos membres une programmation d’activités
+              adaptées durant toute l’année (été-automne-hiver). Ceci représente
+              plus de 350 rencontres donnant accès à des activités sportives,
+              culturelles, sociales ou récréotouristiques. La participation
+              s’élève à plus de 11 000 présences annuellement.
             </p>
-            <p className="text-gray-500 text-lg">
-              Les personnes pouvant être membres de l{"'"}Association de
-              Sherbrooke pour la déficience intellectuelle inc. sont les parents
-              d{"'"}enfants ayant une déficience intellectuelle, les personnes
-              ayant une déficience intellectuelle, les responsables de
-              ressources de type familiale, les intervenants, les organismes
-              ainsi que toute personne démontrant un intérêt pour la déficience
+            <p className="text-lg text-gray-500">
+              Divers autres services et projets particuliers sont aussi
+              articulés, sans compter nos actions de sensibilisation et de
+              promotion des droits. De plus, l’ASDI entretient des partenariats
+              avec plus d’une vingtaine d’autres organisations annuellement.
+            </p>
+            <p className="text-lg text-gray-500">
+              L’ASDI a un impact incalculable sur la santé globale de ses
+              membres et de leurs familles ou leurs proches. Elle demeure une
+              organisation reconnue dans son milieu et essentielle pour soutenir
+              l’intégration des personnes vivant avec une déficience
               intellectuelle.
             </p>
           </div>
           <div className="grid grid-cols-2 pt-6">
-            <div className="space-y-1.5">
-              <div className="font-semibold text-gray-500 text-sm">Members</div>
-              <div className="font-extrabold text-3xl">2056</div>
+            <div className=" space-y-1.5">
+              <div className="text-sm font-semibold text-gray-500">
+                Fondé en
+              </div>
+              <div className="text-3xl font-extrabold">1965</div>
             </div>
             <div className="space-y-1.5">
-              <div className="font-semibold text-gray-500 text-sm">Founded</div>
-              <div className="font-extrabold text-3xl">23</div>
+              <div className="text-sm font-semibold text-gray-500">Membres</div>
+              <div className="text-3xl font-extrabold">+350</div>
             </div>
           </div>
           <div className="grid grid-cols-2 pt-6">
             <div className="space-y-1.5">
-              <div className="font-semibold text-gray-500 text-sm">
-                Activities
+              <div className="text-sm font-semibold text-gray-500">
+                Nombres de rencontres annuelles
               </div>
-              <div className="font-extrabold text-3xl">290</div>
+              <div className="text-3xl font-extrabold">+350</div>
             </div>
             <div className="space-y-1.5">
-              <div className="font-semibold text-gray-500 text-sm">Founded</div>
-              <div className="font-extrabold text-3xl">34</div>
+              <div className="text-sm font-semibold text-gray-500">
+                Nb de présences annuelles
+              </div>
+              <div className="text-3xl font-extrabold">+11000</div>
             </div>
           </div>
         </div>
       </div>
-      <div className="px-4 sm:px-6 md:px-16 py-12 lg:py-20 bg-gray-50 grid lg:grid-cols-[1fr_2.5fr] gap-12 lg:gap-24">
+      <div className="grid gap-12 bg-gray-50 px-4 py-12 sm:px-6 md:px-16 lg:grid-cols-[1fr_2.5fr] lg:gap-24 lg:py-20">
         <div className="space-y-4">
-          <h2 className="tracking-tight font-extrabold text-gray-900 text-4xl text-center lg:text-left">
-            Meet our leadership
+          <h2 className="text-center text-4xl font-extrabold tracking-tight text-gray-900 lg:text-left">
+            Notre équipe
           </h2>
-          <p className="text-gray-500 text-lg text-center lg:text-left">
-            Occaecat labore fugiat cupidatat consequat incididunt nulla
-            exercitation ipsum aute pariatur commodo. Qui ullamco ipsum est
-            fugiat eiusmod aute elit anim fugiat mollit.
+          <p className="text-center text-lg text-gray-500 lg:text-left">
+            Notre équipe dynamique est composée de personnes dévouées ayant à
+            cœur le bien-être des membres et elles se feront un plaisir de vous
+            soutenir.
           </p>
+          <Link href={'/team'}>
+            <a className="group mt-8 flex items-center space-x-1.5 font-semibold text-primary-dark hover:underline">
+              <span>Voir notre équipe au complet</span>
+              <ArrowRightIcon
+                width={22}
+                className="transition-transform group-hover:translate-x-1"
+              />
+            </a>
+          </Link>
         </div>
-        <div className="grid justify-center sm:justify-start sm:grid-cols-2 2xl:grid-cols-3 gap-6 lg:gap-12">
-          {Array(8)
-            .fill({})
-            .map((_, i) => (
-              <div
-                className="grid grid-cols-[auto_2fr] gap-8 items-center"
-                key={i}
-              >
-                <img
-                  className="w-20 h-20 rounded-full"
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTghSGsSSG2lZU9fuWAm4vrrmPAV15hrLius3_0Z7C45QrYf17F2x7VzrdT1XVXMV-z4EM&usqp=CAU"
-                  alt="user avatar"
-                />
-                <div className="space-y-1 font-semibold">
-                  <p className="text-lg">Leslie Alexander</p>
-                  <p className="text-primary">Co-Founder / CEO</p>
-                </div>
-              </div>
-            ))}
+        <div className="grid justify-center gap-6 sm:grid-cols-2 sm:justify-start lg:gap-12 2xl:grid-cols-3">
+          <Member name="Josée Vincent" job="Directrice générale" />
+          <Member name="Brigitte Blanchard" job="Coordonnatrice des services" />
+          <Member name="Karianne Beauchemin" job="Intervenante" />
+          <Member name="Débora Demers" job="Intervenante" />
+          <Member name="Nancy Gosselin" job="Adjointe administrative" />
         </div>
       </div>
-      <div className="mx-4 sm:mx-6 md:mx-16 py-12 lg:py-20 border-b border-gray-100 bg-white flex items-center justify-center flex-col">
-        <h2 className="tracking-tight font-extrabold text-gray-900 text-4xl text-center">
-          Do you want to join us?
+      <div className="mx-4 flex flex-col items-center justify-center border-b border-gray-100 bg-white py-12 sm:mx-6 md:mx-16 lg:py-20">
+        <h2 className="text-center text-4xl font-extrabold tracking-tight text-gray-900">
+          Devenez membre de notre équipe
         </h2>
-        <p className="mb-8 mt-2 max-w-[550px] text-center text-gray-600">
-          Aliqua non eu reprehenderit esse excepteur sint. Aliqua non eu
-          reprehenderit esse excepteur sint.
+        <p className="mb-8 mt-2 max-w-[550px] text-center text-lg text-gray-600">
+          Tu es à la recherche d’une expérience stimulante et valorisante.
+          Joins-toi à nous!
         </p>
-        <div className="grid sm:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid gap-6 sm:grid-cols-2 lg:gap-8">
           <Link href="/devenir-membre">
             <a>
-              <Button size="large">Devenir un membre</Button>
+              <Button size="large">Devenir membre</Button>
             </a>
           </Link>
           <Link href="/devenir-benevol">
             <a>
               <Button size="large" color="secondary">
-                Devenir un benevol
+                Devenir bénévole
               </Button>
             </a>
           </Link>
         </div>
       </div>
-      <div className="px-4 sm:px-6 md:px-16 py-12 lg:py-20 bg-white grid lg:grid-cols-[1fr_2.5fr] gap-12 lg:gap-24">
+      <div
+        id="contact"
+        className="grid gap-12 bg-white px-4 py-12 sm:px-6 md:px-16 lg:grid-cols-[1fr_2.5fr] lg:gap-24 lg:py-20"
+      >
         <div>
-          <h2 className="tracking-tight font-extrabold text-gray-900 text-4xl text-center lg:text-left">
-            Get in touch
+          <h2 className="text-center text-4xl font-extrabold tracking-tight text-gray-900 lg:text-left">
+            Nous contacter
           </h2>
-          <p className="text-gray-500 text-lg mt-4 text-center lg:text-left">
-            Occaecat labore fugiat cupidatat consequat incididunt nulla
-            exercitation ipsum aute pariatur commodo.
+          <p className="mt-4 text-center text-lg text-gray-500 lg:text-left">
+            Si vous désirez, venez nous visiter. Il est toujours préférable de
+            nous appeler au préalable.
           </p>
           <div className="mt-10 space-y-6 text-center lg:text-left">
-            <p className="text-gray-500 text-lg">
-              Pavilion 2 1308 de Portland Blvd.
+            <p className="text-lg text-gray-500">
+              2065, rue Belvédère
               <br />
-              Sherbrooke, Québec Canada
+              Sud Sherbrooke (Québec).
               <br />
-              J1J 1S3
+              J1H 5R8
             </p>
-            <div className="space-y-2 flex flex-col items-center lg:items-start ">
+            <div className="flex flex-col items-center space-y-2 lg:items-start ">
               <div className="flex items-center space-x-4 text-gray-500 ">
                 {phone}
                 <a
-                  href="tel:(819) 346-2227"
+                  href="tel:819 346-2227"
                   className="font-semibold hover:text-primary hover:underline"
                 >
-                  (819) 346-2227
+                  819 346-2227
                 </a>
               </div>
               <div className="flex items-center space-x-4 text-gray-500">
-                <EnvelopeClosedIcon className="w-5 h-5 fill-gray-300" />
+                <EnvelopeClosedIcon className="h-5 w-5 fill-gray-300" />
                 <a
-                  href="mailto:support@asdi.com"
+                  href="mailto:info@asdisherbrooke.org"
                   className="font-semibold hover:text-primary hover:underline "
                 >
-                  support@asdi.com
+                  info@asdisherbrooke.org
                 </a>
               </div>
             </div>
           </div>
         </div>
         <div className="flex justify-center">
-          <form className="space-y-6 w-full max-w-3xl">
+          <form className="w-full max-w-3xl space-y-6">
             <Input placeholder="Write your name" type="text" title="Name" />
             <Input placeholder="Write your email" type="text" title="Email" />
             <Input
@@ -217,53 +245,6 @@ export default function Home() {
               Soumettre
             </Button>
           </form>
-        </div>
-      </div>
-      <div className="px-4 sm:px-6 md:px-16 py-12 lg:py-20 flex items-center justify-center flex-col bg-gray-50">
-        <h2 className="tracking-tight font-extrabold text-gray-900 text-4xl mb-12">
-          Frequently asked questions
-        </h2>
-
-        <div className="w-full max-w-[824px]">
-          <Accordion.Root collapsible type="single">
-            <div className="divide-y divide-gray-200">
-              {Array(5)
-                .fill({})
-                .map((_, i) => (
-                  <Accordion.Item
-                    className="py-4 outline-none"
-                    key={i}
-                    value={i.toString()}
-                  >
-                    <Accordion.Header>
-                      <Accordion.Trigger className="flex items-center w-full justify-between text-gray-700 font-semibold py-2">
-                        <span className="text-lg">
-                          What is the best thing about ASDI?
-                        </span>
-                        <ChevronDownIcon className="h-5 w-5" />
-                      </Accordion.Trigger>
-                    </Accordion.Header>
-                    <Accordion.Content className="accordion text-gray-500 overflow-hidden space-y-3">
-                      <p>
-                        Cupidatat aute ipsum sint duis commodo esse deserunt
-                        proident veniam ex duis reprehenderit mollit. Laborum
-                        dolore cupidatat cupidatat enim. Laboris culpa qui esse
-                        commodo velit laboris anim fugiat ea do dolore. Proident
-                        magna fugiat et labore labore reprehenderit laboris
-                        exercitation sunt nulla sint laborum consectetur et.
-                      </p>
-                      <p>
-                        Excepteur pariatur eu aliquip ut aute et dolore.
-                        Consequat et consequat in esse cillum aute elit mollit
-                        fugiat ut enim mollit nostrud officia. Laborum
-                        consectetur amet nostrud veniam aliquip. Duis
-                        reprehenderit proident qui do.
-                      </p>
-                    </Accordion.Content>
-                  </Accordion.Item>
-                ))}
-            </div>
-          </Accordion.Root>
         </div>
       </div>
     </>

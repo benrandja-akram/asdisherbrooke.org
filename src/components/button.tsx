@@ -3,7 +3,7 @@ import { forwardRef } from 'react'
 
 interface Props extends React.ComponentProps<'button'> {
   size?: 'default' | 'large' | 'small'
-  variant?: 'default' | 'outlined'
+  variant?: 'default' | 'outlined' | 'link'
   color?: 'primary' | 'secondary'
 }
 
@@ -23,20 +23,24 @@ const Button = forwardRef<HTMLButtonElement, Props>(
         ref={ref}
         className={classNames(
           className,
-          'inline-block border border-transparent transition-colors font-semibold',
+          'inline-block border border-transparent font-semibold transition-colors',
           {
-            'px-5 py-2 rounded': size === 'default',
-            'px-5 py-3.5 rounded-lg': size === 'large',
-            'px-3 py-2 rounded': size === 'small',
+            'rounded px-5 py-2': size === 'default',
+            'rounded-lg px-5 py-3.5': size === 'large',
+            'rounded px-3 py-2': size === 'small',
           },
           {
-            'text-primary-dark hover:text-white border  border-primary hover:bg-primary':
+            'border border-primary text-primary-dark  hover:bg-primary hover:text-white':
               variant === 'outlined',
           },
-          variant !== 'outlined' && {
-            'text-white bg-primary hover:bg-primary-dark': color === 'primary',
-            'text-primary-dark bg-indigo-100 hover:bg-indigo-200':
+          variant === 'default' && {
+            'bg-primary text-white hover:bg-primary-dark': color === 'primary',
+            'bg-blue-50 text-primary-dark hover:bg-blue-100':
               color === 'secondary',
+          },
+          variant === 'link' && {
+            'text-primary hover:text-primary-dark hover:underline':
+              color === 'primary',
           }
         )}
         {...props}

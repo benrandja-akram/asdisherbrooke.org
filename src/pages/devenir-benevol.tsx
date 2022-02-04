@@ -6,7 +6,7 @@ function BecomeMember({}) {
   return (
     <>
       <Content />
-      <form className="space-y-6 mt-16">
+      <form className="mt-16 space-y-6">
         <Input placeholder="Write your name" type="text" title="Name" />
         <Input placeholder="Write your email" type="text" title="Email" />
         <Button className="w-full sm:w-auto">Soumettre</Button>

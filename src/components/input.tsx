@@ -18,7 +18,7 @@ const Input = forwardRef<HTMLInputElement, Props>(
     if (title)
       return (
         <label className="block ">
-          <div className="font-semibold mb-1.5 text-base">{title}</div>
+          <div className="mb-1.5 text-base font-semibold">{title}</div>
           {input}
         </label>
       )

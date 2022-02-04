@@ -20,19 +20,19 @@ const MobileMenu: React.FC<Props> = ({ onClose }) => {
   return (
     <nav
       ref={ref}
-      className="grid fixed top-16 bottom-0 right-0 left-0 bg-white z-50 overflow-y-auto"
+      className="fixed top-16 bottom-0 right-0 left-0 z-50 grid overflow-y-auto bg-white md:hidden"
     >
       <div className="w-full px-6 py-8 ">
         <Link href="/devenir-membre">
           <a onClick={onClose} className="block">
             <Button variant="outlined" size="small" className="w-full">
-              Become Member
+              Devenir member
             </Button>
           </a>
         </Link>
 
         <Accordion.Root collapsible type="single">
-          <div className="divide-y divide-gray-200 mt-8">
+          <div className="mt-8 divide-y divide-gray-200">
             {[
               {
                 title: 'ASDI',
@@ -72,7 +72,7 @@ const MobileMenu: React.FC<Props> = ({ onClose }) => {
                 value={i.toString()}
               >
                 <Accordion.Header>
-                  <Accordion.Trigger className="flex items-center w-full justify-between text-gray-700 font-semibold py-4">
+                  <Accordion.Trigger className="flex w-full items-center justify-between py-4 font-semibold text-gray-700">
                     {item.link ? (
                       <Link href={item.link}>
                         <a onClick={onClose} className="text-lg">
@@ -90,11 +90,11 @@ const MobileMenu: React.FC<Props> = ({ onClose }) => {
                   </Accordion.Trigger>
                 </Accordion.Header>
                 {!!item.children.length && (
-                  <Accordion.Content className="accordion text-gray-500 overflow-hidden">
+                  <Accordion.Content className="accordion overflow-hidden text-gray-500">
                     {item.children.map((menu) => (
                       <div
                         key={menu.link}
-                        className="text-gray-500 py-1 mb-2.5"
+                        className="mb-2.5 py-1 text-gray-500"
                       >
                         <Link href={menu.link}>
                           <a onClick={onClose} key={menu.link}>

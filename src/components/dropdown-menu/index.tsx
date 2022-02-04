@@ -17,7 +17,7 @@ const DropdownContent: React.FC<MenuContentProps> = (props) => {
       side="bottom"
       align="center"
       className={
-        'py-2 bg-white border border-gray-100 shadow-xl min-w-[200px] rounded-lg ' +
+        'min-w-[200px] rounded-lg border border-gray-100 bg-white py-2 shadow-xl ' +
         styles.content
       }
       sideOffset={8}
@@ -31,7 +31,7 @@ const DropdownItem = forwardRef<HTMLDivElement, MenuItemProps>(
       <Item
         ref={ref}
         className={classNames(
-          'px-4 py-1.5 flex items-center cursor-pointer text-gray-700 focus:bg-gray-50 outline-none space-x-4',
+          'flex cursor-pointer items-center space-x-4 px-4 py-1.5 text-gray-700 outline-none focus:bg-gray-50',
           className
         )}
         {...props}
