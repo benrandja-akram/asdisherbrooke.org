@@ -1,16 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import * as Accordion from '@radix-ui/react-accordion'
-import {
-  ArrowRightIcon,
-  ChevronDownIcon,
-  EnvelopeClosedIcon,
-} from '@radix-ui/react-icons'
+import { ArrowRightIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 
 import Button from 'components/button'
-import Input from 'components/input'
-import Textarea from 'components/textarea'
-import Image from 'next/image'
 import Seo from 'components/seo'
 
 function Member({ name, job }: { name: string; job: string }) {
@@ -217,7 +209,7 @@ export default function Home() {
         </div>
         <div className="grid gap-x-6 gap-y-6 sm:grid-cols-2 lg:gap-y-12">
           <div>
-            <h4 className="mb-2.5 text-lg font-bold">En personne</h4>
+            <h3 className="mb-2.5 text-lg font-bold">En personne</h3>
             <p className="text-gray-500">
               <a
                 target="_blank"
@@ -231,13 +223,13 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <h4 className="mb-2.5 text-lg font-bold">Nos heures d’ouverture</h4>
+            <h3 className="mb-2.5 text-lg font-bold">Nos heures d’ouverture</h3>
             <p className="text-gray-500">
               Du lundi au vendredi de 9h à 12h de 13h à 16h30
             </p>
           </div>
           <div>
-            <h4 className="mb-2.5 text-lg font-bold">Par téléphone</h4>
+            <h3 className="mb-2.5 text-lg font-bold">Par téléphone</h3>
             <p className="text-gray-500">
               <a
                 target="_blank"
@@ -260,7 +252,7 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <h4 className="mb-2.5 text-lg font-bold">Par courriel</h4>
+            <h3 className="mb-2.5 text-lg font-bold">Par courriel</h3>
             <a
               href="mailto:info@asdisherbrooke.org"
               target="_blank"

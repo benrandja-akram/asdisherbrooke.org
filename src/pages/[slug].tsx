@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
-import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+import { GetStaticPaths, GetStaticProps } from 'next'
 import { MDXRemote } from 'next-mdx-remote'
 
-import { getProject, getProjects } from 'lib/content'
+import { getContentPages, getPageContent } from 'lib/content'
 import Seo from 'components/seo'
 
 type Props = {
@@ -28,12 +28,12 @@ function Page({ title, image, summary, slug, mdx }: Props) {
 Page.layoutProps = { variant: 'content' }
 export const getStaticProps: GetStaticProps = async (ctx) => {
   return {
-    props: { ...(await getProject(ctx.params!.slug as string)) },
+    props: { ...(await getPageContent(ctx.params!.slug as string)) },
   }
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const projects = await getProjects()
+  const projects = await getContentPages()
   return {
     paths: projects.map((file) => ({ params: { slug: file } })),
     fallback: false,
