@@ -4,7 +4,7 @@ import Link from 'next/link'
 function NotFound({}) {
   return (
     <article className="mx-auto w-full max-w-3xl py-8 px-4 sm:px-6 md:py-16 md:px-0">
-      <div className="mb-1.5 text-base font-bold tracking-wider text-indigo-500">
+      <div className="mb-1.5 text-base font-bold tracking-wider text-primary-light">
         404 ERREUR
       </div>
       <h1 className="mb-6 text-4xl font-extrabold tracking-tight text-gray-900 sm:text-xl md:text-5xl">

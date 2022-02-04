@@ -8,7 +8,6 @@ import {
 } from '@radix-ui/react-icons'
 import Button from 'components/button'
 import Dropdown from 'components/dropdown-menu'
-import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
@@ -23,8 +22,8 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
   const router = useRouter()
   return (
     <div>
-      <div className="relative">
-        <img src="/banner.jpg" height={48} />
+      <div className="relative hidden md:block">
+        <img alt="" src="/banner.jpg" height={48} className="h-12" />
         <div className="absolute inset-0 flex items-center justify-center space-x-4 font-semibold text-white">
           <span>Nouvelle instruction concernant la COVID19</span>
           <Link href="/covid-19">
