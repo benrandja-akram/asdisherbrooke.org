@@ -22,46 +22,65 @@ const MobileMenu: React.FC<Props> = ({ onClose }) => {
       ref={ref}
       className="fixed top-16 bottom-0 right-0 left-0 z-50 grid overflow-y-auto bg-white md:hidden"
     >
-      <div className="w-full px-6 py-8 ">
-        <Link href="/devenir-membre">
-          <a onClick={onClose} className="block">
-            <Button variant="outlined" size="small" className="w-full">
-              Devenir member
-            </Button>
-          </a>
-        </Link>
+      <div className="w-full px-6 py-8">
+        <div className="space-y-4">
+          <Link href="/#contact">
+            <a onClick={onClose} className="block  ">
+              <Button className="block w-full" variant="outlined" size="small">
+                Nous contacter
+              </Button>
+            </a>
+          </Link>
+          <Link href="/devenir-membre">
+            <a onClick={onClose} className="block">
+              <Button variant="default" size="small" className="w-full">
+                Devenir member
+              </Button>
+            </a>
+          </Link>
+        </div>
 
-        <Accordion.Root collapsible type="single">
+        <Accordion.Root type="multiple">
           <div className="mt-8 divide-y divide-gray-200">
             {[
               {
                 title: 'ASDI',
                 link: undefined,
                 children: [
-                  { title: 'Missions', link: '/asdi' },
-                  { title: "Plus d'infos", link: '/asdi/infos' },
+                  { title: 'Historique', link: '/asdi-historique' },
+                  { title: 'Mission', link: '/asdi-mission' },
+                  { title: 'Équipe', link: '/asdi-équipe' },
                 ],
               },
               {
-                title: 'Activities',
-                link: '/activities',
+                title: 'Carrière',
+                children: [
+                  {
+                    title: 'Devenir Employé',
+                    link: '/carriere-devenir-employé',
+                  },
+                  {
+                    title: 'Devenir Bénévole',
+                    link: '/carriere-devenir-bénévol',
+                  },
+                ],
+              },
+              {
+                title: 'Activités',
+                link: '/activités',
                 children: [],
               },
               {
-                title: 'Plus',
+                title: 'Informations',
                 link: undefined,
                 children: [
                   {
-                    title: 'Deficience intellectuelle',
-                    link: '/diffeience',
-                  },
-                  {
-                    title: 'Lexique',
-                    link: '/lexique',
+                    title: 'La déficience intellectuelle',
+                    link: '/infos-déficience-intellectuelle',
                   },
                   {
                     title: 'Partenaires',
-                    link: '/partenaires',
+                    link: '/infos-partenaires',
                   },
                 ],
               },

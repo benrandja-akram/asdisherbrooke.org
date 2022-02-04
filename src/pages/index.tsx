@@ -10,6 +10,7 @@ import Link from 'next/link'
 import Button from 'components/button'
 import Input from 'components/input'
 import Textarea from 'components/textarea'
+import Image from 'next/image'
 
 function Member({ name, job }: { name: string; job: string }) {
   return (
@@ -145,12 +146,14 @@ export default function Home() {
             soutenir.
           </p>
           <Link href={'/team'}>
-            <a className="group flex items-center space-x-1.5 font-semibold text-primary-dark hover:underline">
-              <span>Voir notre équipe au complet</span>
-              <ArrowRightIcon
-                width={22}
-                className="transition-transform group-hover:translate-x-1"
-              />
+            <a className="group flex items-center justify-center space-x-1.5 text-lg font-semibold text-primary-dark hover:underline lg:justify-start">
+              <div>
+                <span>Voir notre équipe au complet</span>
+                <ArrowRightIcon
+                  width={22}
+                  className="ml-1 inline-block transition-transform group-hover:translate-x-1"
+                />
+              </div>
             </a>
           </Link>
         </div>

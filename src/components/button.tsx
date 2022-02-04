@@ -35,7 +35,7 @@ const Button = forwardRef<HTMLButtonElement, Props>(
           },
           variant === 'default' && {
             'bg-primary text-white hover:bg-primary-dark': color === 'primary',
-            'bg-blue-50 text-primary-dark hover:bg-blue-100':
+            'bg-sky-50 text-primary-dark hover:bg-sky-100':
               color === 'secondary',
           },
           variant === 'link' && {
