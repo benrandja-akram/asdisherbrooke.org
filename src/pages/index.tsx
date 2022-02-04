@@ -155,15 +155,13 @@ export default function Home() {
             cœur le bien-être des membres et elles se feront un plaisir de vous
             soutenir.
           </p>
-          <Link href={'/team'}>
+          <Link href={'/asdi-équipe'}>
             <a className="group flex items-center justify-center space-x-1.5 text-lg font-semibold text-primary-dark hover:underline lg:justify-start">
-              <div>
-                <span>Voir notre équipe au complet</span>
-                <ArrowRightIcon
-                  width={22}
-                  className="ml-1 inline-block transition-transform group-hover:translate-x-1"
-                />
-              </div>
+              <span>Voir notre équipe au complet</span>
+              <ArrowRightIcon
+                width={22}
+                className="ml-1 inline-block transition-transform group-hover:translate-x-1"
+              />
             </a>
           </Link>
         </div>
@@ -216,54 +214,62 @@ export default function Home() {
             Si vous désirez, venez nous visiter. Il est toujours préférable de
             nous appeler au préalable.
           </p>
-          <div className="mt-10 space-y-6 text-center lg:text-left">
-            <p className="text-lg text-gray-500">
-              2065, rue Belvédère
-              <br />
-              Sud Sherbrooke (Québec).
-              <br />
-              J1H 5R8
-            </p>
-            <div className="flex flex-col items-center space-y-2 lg:items-start ">
-              <div className="flex items-center space-x-4 text-gray-500 ">
-                {phone}
-                <a
-                  href="tel:819 346-2227"
-                  className="font-semibold hover:text-primary hover:underline"
-                >
-                  819 346-2227
-                </a>
-              </div>
-              <div className="flex items-center space-x-4 text-gray-500">
-                <EnvelopeClosedIcon className="h-5 w-5 fill-gray-300" />
-                <a
-                  href="mailto:info@asdisherbrooke.org"
-                  className="font-semibold hover:text-primary hover:underline "
-                >
-                  info@asdisherbrooke.org
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
-        <div className="flex justify-center">
-          <form className="w-full max-w-3xl space-y-6">
-            <Input placeholder="Write your name" type="text" title="Name" />
-            <Input placeholder="Write your email" type="text" title="Email" />
-            <Input
-              placeholder="Write your phone number"
-              type="text"
-              title="Phone Number"
-            />
-            <Textarea
-              placeholder="Write your phone message"
-              title="Message"
-              rows={6}
-            />
-            <Button size="large" className="w-full sm:w-auto">
-              Soumettre
-            </Button>
-          </form>
+        <div className="grid gap-x-6 gap-y-6 sm:grid-cols-2 lg:gap-y-12">
+          <div>
+            <h4 className="mb-2.5 text-lg font-bold">En personne</h4>
+            <p className="text-gray-500">
+              <a
+                target="_blank"
+                rel="noreferrer noopener"
+                href="https://map.google.com"
+                className="text-gray-500 underline hover:text-primary"
+              >
+                2065, rue Belvédère Sud <br /> Sherbrooke (Québec) <br /> J1H
+                5R8
+              </a>
+            </p>
+          </div>
+          <div>
+            <h4 className="mb-2.5 text-lg font-bold">Nos heures d’ouverture</h4>
+            <p className="text-gray-500">
+              Du lundi au vendredi de 9h à 12h de 13h à 16h30
+            </p>
+          </div>
+          <div>
+            <h4 className="mb-2.5 text-lg font-bold">Par téléphone</h4>
+            <p className="text-gray-500">
+              <a
+                target="_blank"
+                rel="noreferrer noopener"
+                href="tel:819 346-2227"
+                className="text-gray-500 underline hover:text-primary"
+              >
+                819 346-2227
+              </a>
+              <br />
+              <span className="font-semibold">Télécopieur: </span>
+              <a
+                target="_blank"
+                rel="noreferrer noopener"
+                href="tel:819 346-8752"
+                className="text-gray-500 underline hover:text-primary"
+              >
+                819 346-8752
+              </a>
+            </p>
+          </div>
+          <div>
+            <h4 className="mb-2.5 text-lg font-bold">Par courriel</h4>
+            <a
+              href="mailto:info@asdisherbrooke.org"
+              target="_blank"
+              rel="noreferrer noopener"
+              className="text-gray-500 underline hover:text-primary"
+            >
+              info@asdisherbrooke.org
+            </a>
+          </div>
         </div>
       </div>
     </>

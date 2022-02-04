@@ -1,4 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
+import { useState } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 import {
   ArrowRightIcon,
   ChevronDownIcon,
@@ -8,10 +12,6 @@ import {
 } from '@radix-ui/react-icons'
 import Button from 'components/button'
 import Dropdown from 'components/dropdown-menu'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { useState } from 'react'
 import MobileMenu from './mobile-menu'
 
 interface Props {
@@ -46,13 +46,13 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
           </a>
         </Link>
 
-        <nav className="xl:space-12 hidden items-center justify-between space-x-6 md:flex">
+        <nav className="hidden items-center justify-between space-x-6 md:flex xl:space-x-10">
           <Dropdown.Root>
             <Dropdown.Trigger asChild>
-              <a className="flex cursor-pointer items-center space-x-2 font-semibold text-gray-500 transition-colors hover:text-primary-dark">
+              <span className="flex cursor-pointer items-center space-x-2 font-semibold text-gray-500 transition-colors hover:text-primary-dark">
                 <span>ASDI</span>
                 <ChevronDownIcon />
-              </a>
+              </span>
             </Dropdown.Trigger>
             <Dropdown.Content sideOffset={16} align="center">
               <Dropdown.Item onSelect={() => router.push('/asdi-historique')}>
@@ -71,10 +71,10 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
           </Dropdown.Root>
           <Dropdown.Root>
             <Dropdown.Trigger asChild>
-              <a className="flex cursor-pointer items-center space-x-2 font-semibold text-gray-500 transition-colors hover:text-primary-dark">
+              <span className="flex cursor-pointer items-center space-x-2 font-semibold text-gray-500 transition-colors hover:text-primary-dark">
                 <span>Carrière</span>
                 <ChevronDownIcon />
-              </a>
+              </span>
             </Dropdown.Trigger>
             <Dropdown.Content sideOffset={16} align="center">
               <Dropdown.Item
@@ -92,17 +92,17 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
             </Dropdown.Content>
           </Dropdown.Root>
           <Link href="/activités">
-            <a className="flex cursor-pointer items-center space-x-2 font-semibold text-gray-500 transition-colors hover:text-primary-dark hover:underline">
+            <span className="flex cursor-pointer items-center space-x-2 font-semibold text-gray-500 transition-colors hover:text-primary-dark hover:underline">
               Activités
-            </a>
+            </span>
           </Link>
 
           <Dropdown.Root>
             <Dropdown.Trigger asChild>
-              <a className="flex cursor-pointer items-center space-x-2 font-semibold text-gray-500 transition-colors hover:text-primary-dark">
+              <span className="flex cursor-pointer items-center space-x-2 font-semibold text-gray-500 transition-colors hover:text-primary-dark">
                 <span>Informations</span>
                 <ChevronDownIcon />
-              </a>
+              </span>
             </Dropdown.Trigger>
             <Dropdown.Content sideOffset={16} align="center">
               <Dropdown.Item
