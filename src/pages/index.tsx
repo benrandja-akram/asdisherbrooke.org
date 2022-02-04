@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import { ArrowRightIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
+import Image from 'next/image'
 
 import Button from 'components/button'
 import Seo from 'components/seo'
@@ -8,10 +9,12 @@ import Seo from 'components/seo'
 function Member({ name, job }: { name: string; job: string }) {
   return (
     <div className="grid grid-cols-[auto_2fr] items-center gap-8">
-      <img
+      <Image
         className="h-20 w-20 rounded-full"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTghSGsSSG2lZU9fuWAm4vrrmPAV15hrLius3_0Z7C45QrYf17F2x7VzrdT1XVXMV-z4EM&usqp=CAU"
+        src="/woman-member.png"
         alt="user avatar"
+        width={80}
+        height={80}
       />
       <div className="space-y-1 font-semibold">
         <p className="text-lg">{name}</p>
