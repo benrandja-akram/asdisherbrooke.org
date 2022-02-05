@@ -9,7 +9,7 @@ import avatar from '../../public/woman-member.png'
 
 function Member({ name, job }: { name: string; job: string }) {
   return (
-    <div className="grid grid-cols-[auto_2fr] items-center gap-8">
+    <div className="grid grid-cols-[auto_2fr] items-center gap-8 text-lg">
       <Image
         className="h-20 w-20 rounded-full"
         src={avatar}
@@ -141,7 +141,7 @@ export default function Home() {
           </div>
           <div>
             <Link href={'/asdi-mission'}>
-              <a className="group mt-6 inline-block space-x-1.5 text-lg font-semibold text-primary-dark hover:underline">
+              <a className="group mt-6 inline-block space-x-1.5 text-lg font-semibold text-primary hover:underline">
                 <span>Plus de détails</span>
                 <ArrowRightIcon
                   width={22}
@@ -163,7 +163,7 @@ export default function Home() {
             soutenir.
           </p>
           <Link href={'/asdi-équipe'}>
-            <a className="group mt-4 flex justify-center space-x-1.5 text-lg font-semibold text-primary-dark hover:underline md:mt-8 lg:justify-start">
+            <a className="group mt-4 flex justify-center space-x-1.5 text-lg font-semibold text-primary hover:underline md:mt-8 lg:justify-start">
               <span>
                 <span>Voir notre équipe au complet</span>
                 <ArrowRightIcon

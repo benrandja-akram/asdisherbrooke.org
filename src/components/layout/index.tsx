@@ -161,7 +161,7 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
       )}
       {variant === 'default' && children}
       {variant === 'content' && (
-        <article className="prose mx-auto w-full py-8 px-4 prose-a:text-primary prose-img:w-full prose-img:rounded-2xl sm:px-6 md:py-16 md:px-0 xl:prose-lg">
+        <article className="prose mx-auto w-full py-8 px-4 prose-a:text-blue-600  prose-img:w-full prose-img:rounded-2xl sm:px-6 md:py-16 md:px-0 xl:prose-lg">
           {children}
         </article>
       )}
