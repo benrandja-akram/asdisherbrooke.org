@@ -31,7 +31,7 @@ const DropdownItem = forwardRef<HTMLDivElement, MenuItemProps>(
       <Item
         ref={ref}
         className={classNames(
-          'flex cursor-pointer items-center space-x-4 px-4 py-1.5 text-gray-700 outline-none focus:bg-gray-50 focus:text-primary-dark',
+          'flex cursor-pointer items-center space-x-4 px-4 py-1.5 pr-12 text-gray-700 outline-none focus:bg-gray-50 focus:text-primary-dark',
           className
         )}
         {...props}
