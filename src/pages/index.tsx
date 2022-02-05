@@ -138,6 +138,17 @@ export default function Home() {
               <div className="text-3xl font-extrabold">+11000</div>
             </div>
           </div>
+          <div>
+            <Link href={'/asdi-mission'}>
+              <a className="group mt-6 inline-block space-x-1.5 text-lg font-semibold text-primary-dark hover:underline">
+                <span>Plus de détails</span>
+                <ArrowRightIcon
+                  width={22}
+                  className="ml-1 inline transition-transform group-hover:translate-x-1"
+                />
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="grid gap-12 bg-gray-50 px-4 py-12 sm:px-6 md:px-16 lg:grid-cols-[1fr_2.5fr] lg:gap-24 lg:py-20">
@@ -151,16 +162,18 @@ export default function Home() {
             soutenir.
           </p>
           <Link href={'/asdi-équipe'}>
-            <a className="group flex items-center justify-center space-x-1.5 text-lg font-semibold text-primary-dark hover:underline lg:justify-start">
-              <span>Voir notre équipe au complet</span>
-              <ArrowRightIcon
-                width={22}
-                className="ml-1 inline-block transition-transform group-hover:translate-x-1"
-              />
+            <a className="group mt-4 flex justify-center space-x-1.5 text-lg font-semibold text-primary-dark hover:underline md:mt-8 lg:justify-start">
+              <span>
+                <span>Voir notre équipe au complet</span>
+                <ArrowRightIcon
+                  width={22}
+                  className="ml-1 inline transition-transform group-hover:translate-x-1"
+                />
+              </span>
             </a>
           </Link>
         </div>
-        <div className="grid justify-center gap-6 sm:grid-cols-2 sm:justify-start lg:gap-12 2xl:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2 lg:gap-12 2xl:grid-cols-3">
           <Member name="Josée Vincent" job="Directrice générale" />
           <Member name="Brigitte Blanchard" job="Coordonnatrice des services" />
           <Member name="Karianne Beauchemin" job="Intervenante" />

@@ -4,6 +4,8 @@ import { MDXRemote } from 'next-mdx-remote'
 
 import { getContentPages, getPageContent } from 'lib/content'
 import Seo from 'components/seo'
+import Alert from 'components/alert'
+import Button from 'components/button'
 
 type Props = {
   title: string
@@ -16,11 +18,10 @@ type Props = {
 function Page({ title, image, summary, slug, mdx }: Props) {
   return (
     <>
-      <p>{slug}</p>
-      <h1>{title}</h1>
+      <h1 className="text-center">{title}</h1>
       <img src={image} alt="" />
       <Seo description={summary} image={image} title={title} />
-      <MDXRemote {...mdx} />
+      <MDXRemote {...mdx} components={{ Alert, Button }} />
     </>
   )
 }

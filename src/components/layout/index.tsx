@@ -24,14 +24,18 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
   return (
     <div>
       {!showMobileMenu && (
-        <div className="relative flex min-h-[48px] flex-col items-center justify-center space-y-2 bg-primary px-4 py-2 text-center font-semibold text-white sm:flex-row sm:space-x-4 sm:space-y-0">
-          <span>Nouvelle instruction concernant la COVID19</span>
-          <Link href="/covid-19">
-            <a className="group inline-flex items-center space-x-1.5 rounded bg-white px-3 py-1 font-semibold tracking-tight text-primary-dark">
-              <span>Plus d{"'"}infos</span>
-              <ArrowRightIcon className="transition-transform group-hover:translate-x-1" />
-            </a>
-          </Link>
+        <div className="flex min-h-[48px] items-center justify-center bg-primary px-4 py-2">
+          <div className="space-y-2 text-center text-sm font-semibold text-white sm:flex-row sm:space-x-4 sm:space-y-0">
+            <span className="mr-2">
+              Nouvelle instruction concernant la COVID19
+            </span>
+            <Link href="/covid-19">
+              <a className="group inline-flex items-center space-x-1.5 rounded bg-white px-3 py-1 font-semibold tracking-tight text-primary-dark">
+                <span>Plus d{"'"}infos</span>
+                <ArrowRightIcon className="transition-transform group-hover:translate-x-1" />
+              </a>
+            </Link>
+          </div>
         </div>
       )}
       <header
@@ -76,7 +80,12 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
                 <ChevronDownIcon />
               </span>
             </Dropdown.Trigger>
+
             <Dropdown.Content sideOffset={16} align="center">
+              <Dropdown.Item onSelect={() => router.push('/devenir-membre')}>
+                <Link2Icon className="h-3.5 w-3.5 opacity-75" />
+                <span>Devenir membre</span>
+              </Dropdown.Item>
               <Dropdown.Item
                 onSelect={() => router.push('/carriere-devenir-employé')}
               >
@@ -151,7 +160,7 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
       )}
       {variant === 'default' && children}
       {variant === 'content' && (
-        <article className="prose mx-auto w-full py-8 px-4 prose-img:w-full prose-img:rounded-2xl sm:px-6 md:py-16 md:px-0 xl:prose-lg">
+        <article className="prose mx-auto w-full py-8 px-4 prose-a:text-primary prose-img:w-full prose-img:rounded-2xl sm:px-6 md:py-16 md:px-0 xl:prose-lg">
           {children}
         </article>
       )}

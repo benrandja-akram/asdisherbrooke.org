@@ -56,6 +56,10 @@ const MobileMenu: React.FC<Props> = ({ onClose }) => {
                 title: 'Carrière',
                 children: [
                   {
+                    title: 'Devenir membre',
+                    link: '/devenir-membre',
+                  },
+                  {
                     title: 'Devenir Employé',
                     link: '/carriere-devenir-employé',
                   },
