@@ -5,13 +5,14 @@ import Image from 'next/image'
 
 import Button from 'components/button'
 import Seo from 'components/seo'
+import avatar from '../../public/woman-member.png'
 
 function Member({ name, job }: { name: string; job: string }) {
   return (
     <div className="grid grid-cols-[auto_2fr] items-center gap-8">
       <Image
         className="h-20 w-20 rounded-full"
-        src="/woman-member.png"
+        src={avatar}
         alt="user avatar"
         width={80}
         height={80}

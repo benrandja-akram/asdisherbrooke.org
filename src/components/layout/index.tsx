@@ -14,6 +14,7 @@ import Button from 'components/button'
 import Dropdown from 'components/dropdown-menu'
 import MobileMenu from './mobile-menu'
 
+import logo from '../../../public/logo.png'
 interface Props {
   variant?: 'default' | 'content'
 }
@@ -46,7 +47,7 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
       >
         <Link href="/">
           <a className="inline-flex">
-            <Image alt="logo" src="/logo.png" width={81} height={48} />
+            <Image alt="logo" src={logo} width={81} height={48} />
           </a>
         </Link>
 
