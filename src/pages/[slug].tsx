@@ -23,6 +23,8 @@ function MDXLink({ href, ...props }: React.ComponentProps<'a'>) {
     return (
       <a
         {...props}
+        href={href}
+        rel="noreferrer noopener"
         target={url.hostname === 'asdi.vercel.app' ? '_self' : '_blank'}
       />
     )
