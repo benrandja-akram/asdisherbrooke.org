@@ -1,6 +1,8 @@
-# Association de Sherbrooke pour la déficience intellectuelle
-
 ![ASDI](./public/readme.png)
+<br/>
+<br/>
+
+# Association de Sherbrooke pour la déficience intellectuelle
 
 The website of Sherbrooke Association for Intellectual Disabilities ([`asdi.vercel.com`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app))
 
