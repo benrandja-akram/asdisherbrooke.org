@@ -91,13 +91,13 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
                 onSelect={() => router.push('/carriere-devenir-employé')}
               >
                 <Link2Icon className="h-3.5 w-3.5 opacity-75" />
-                <span>Devenir Employé</span>
+                <span>Devenir employé</span>
               </Dropdown.Item>
               <Dropdown.Item
                 onSelect={() => router.push('/carriere-devenir-bénévol')}
               >
                 <Link2Icon className="h-3.5 w-3.5 opacity-75" />
-                <span>Devenir Bénévole</span>
+                <span>Devenir bénévole</span>
               </Dropdown.Item>
             </Dropdown.Content>
           </Dropdown.Root>
