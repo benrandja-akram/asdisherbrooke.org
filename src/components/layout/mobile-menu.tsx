@@ -60,11 +60,11 @@ const MobileMenu: React.FC<Props> = ({ onClose }) => {
                     link: '/devenir-membre',
                   },
                   {
-                    title: 'Devenir Employé',
+                    title: 'Devenir employé',
                     link: '/carriere-devenir-employé',
                   },
                   {
-                    title: 'Devenir Bénévole',
+                    title: 'Devenir bénévole',
                     link: '/carriere-devenir-bénévol',
                   },
                 ],

@@ -87,7 +87,7 @@ export default function Home() {
         <div className="space-y-6 divide-y divide-gray-100 lg:max-w-[600px]">
           <div className="space-y-6">
             <h1 className="mt-4  text-center text-4xl font-extrabold tracking-tight text-gray-900 lg:text-left">
-              Nos Actions
+              Nos actions
             </h1>
 
             <p className="text-lg text-gray-500">
@@ -128,13 +128,13 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-4 pt-6">
             <div className="space-y-1.5">
               <div className="text-sm font-semibold text-gray-500">
-                Nombres de rencontres annuelles
+                Nombre de rencontres annuelles
               </div>
               <div className="text-3xl font-extrabold">+350</div>
             </div>
             <div className="space-y-1.5">
               <div className="text-sm font-semibold text-gray-500">
-                Nombres de présences annuelles
+                Nombre de présences annuelles
               </div>
               <div className="text-3xl font-extrabold">+11000</div>
             </div>
@@ -165,7 +165,7 @@ export default function Home() {
           <Link href={'/asdi-équipe'}>
             <a className="group mt-4 flex justify-center space-x-1.5 text-lg font-semibold text-primary hover:underline md:mt-8 lg:justify-start">
               <span>
-                <span>Voir notre équipe au complet</span>
+                <span>Voir notre équipe complète</span>
                 <ArrowRightIcon
                   width={22}
                   className="ml-1 inline transition-transform group-hover:translate-x-1"
@@ -177,7 +177,7 @@ export default function Home() {
         <div className="grid gap-6 sm:grid-cols-2 lg:gap-12 2xl:grid-cols-3">
           <Member name="Josée Vincent" job="Directrice générale" />
           <Member name="Brigitte Blanchard" job="Coordonnatrice des services" />
-          <Member name="Karianne Beauchemin" job="Intervenante" />
+          <Member name="Karianne Beaubien" job="Intervenante" />
           <Member name="Débora Demers" job="Intervenante" />
           <Member name="Nancy Gosselin" job="Adjointe administrative" />
         </div>
@@ -242,7 +242,7 @@ export default function Home() {
           <div>
             <h3 className="mb-2.5 text-lg font-bold">Nos heures d’ouverture</h3>
             <p className="text-gray-500">
-              Du lundi au vendredi de 9h à 12h de 13h à 16h30
+              Du lundi au vendredi de 9h à 12h et de 13h à 16h30
             </p>
           </div>
           <div>
