@@ -27,9 +27,7 @@ const Layout: React.FC<Props> = ({ children, variant = 'default' }) => {
       {!showMobileMenu && (
         <div className="flex min-h-[48px] items-center justify-center bg-primary px-4 py-2">
           <div className="space-y-2 text-center text-sm font-semibold text-white sm:flex-row sm:space-x-4 sm:space-y-0">
-            <span className="mr-2">
-              Nouvelle instruction concernant la COVID19
-            </span>
+            <span className="mr-2">Mesures COVID-19</span>
             <Link href="/covid-19">
               <a className="group inline-flex items-center space-x-1.5 rounded bg-white px-3 py-1 font-semibold tracking-tight text-primary-dark">
                 <span>Plus d{"'"}infos</span>
