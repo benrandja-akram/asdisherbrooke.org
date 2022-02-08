@@ -6,6 +6,8 @@ import { getContentPages, getPageContent } from 'lib/content'
 import Seo from 'components/seo'
 import Alert from 'components/alert'
 import Button from 'components/button'
+import React from 'react'
+import Link from 'next/link'
 
 type Props = {
   title: string
@@ -15,13 +17,34 @@ type Props = {
   mdx: any
 }
 
-function Page({ title, image, summary, slug, mdx }: Props) {
+function MDXLink({ href, ...props }: React.ComponentProps<'a'>) {
+  try {
+    const url = new URL(href || '')
+    return (
+      <a
+        {...props}
+        href={href}
+        rel="noreferrer noopener"
+        target={url.hostname === 'asdi.vercel.app' ? '_self' : '_blank'}
+      />
+    )
+  } catch (error) {
+    // absolute url
+    return (
+      <Link href={href!}>
+        <a {...props} />
+      </Link>
+    )
+  }
+}
+
+function Page({ title, image, summary, mdx }: Props) {
   return (
     <>
       <h1 className="text-center">{title}</h1>
       <img src={image} alt="" />
       <Seo description={summary} image={image} title={title} />
-      <MDXRemote {...mdx} components={{ Alert, Button }} />
+      <MDXRemote {...mdx} components={{ Alert, Button, a: MDXLink }} />
     </>
   )
 }
