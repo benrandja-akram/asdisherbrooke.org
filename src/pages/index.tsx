@@ -5,14 +5,28 @@ import Image from 'next/image'
 
 import Button from 'components/button'
 import Seo from 'components/seo'
-import avatar from '../../public/woman-member.png'
+import avatar1 from '../../public/avatar-1.png'
+import avatar2 from '../../public/avatar-2.png'
+import avatar3 from '../../public/avatar-3.png'
+import avatar4 from '../../public/avatar-4.png'
+import avatar5 from '../../public/avatar-5.png'
+import mainBanner from '../../public/main-banner.jpg'
+import secondaryBanner from '../../public/main-banner.jpg'
 
-function Member({ name, job }: { name: string; job: string }) {
+function Member({
+  name,
+  job,
+  image,
+}: {
+  name: string
+  job: string
+  image: React.ComponentProps<typeof Image>['src']
+}) {
   return (
     <div className="grid grid-cols-[auto_2fr] items-center gap-8 text-lg">
       <Image
         className="h-20 w-20 rounded-full"
-        src={avatar}
+        src={image}
         alt="user avatar"
         width={80}
         height={80}
@@ -67,19 +81,15 @@ export default function Home() {
           </div>
         </div>
         <div className="hidden h-full space-y-6 lg:block">
-          <img
-            alt=""
-            src="https://canalm.vuesetvoix.com/app/uploads/2018/03/shutterstock_527001838-825x550.jpg"
-            className="h-full object-cover"
-          />
+          <img alt="" src={mainBanner.src} className="h-full object-cover" />
         </div>
       </div>
       <div className="grid gap-x-16 py-12 px-4 sm:px-6 md:px-16 lg:grid-cols-2 lg:py-20">
         <div className="hidden justify-end lg:flex">
           <div>
-            <img
+            <Image
               alt=""
-              src="https://hizy.org/sn_uploads/article/iStock_73817433_SMALL.jpg?maxh=1520px&maxw=1520px"
+              src={secondaryBanner}
               className="w-full max-w-xl rounded-2xl object-cover"
             />
           </div>
@@ -175,11 +185,23 @@ export default function Home() {
           </Link>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:gap-12 2xl:grid-cols-3">
-          <Member name="Josée Vincent" job="Directrice générale" />
-          <Member name="Brigitte Blanchard" job="Coordonnatrice des services" />
-          <Member name="Karianne Beaubien" job="Intervenante" />
-          <Member name="Débora Demers" job="Intervenante" />
-          <Member name="Nancy Gosselin" job="Adjointe administrative" />
+          <Member
+            image={avatar1}
+            name="Josée Vincent"
+            job="Directrice générale"
+          />
+          <Member
+            image={avatar2}
+            name="Brigitte Blanchard"
+            job="Coordonnatrice des services"
+          />
+          <Member image={avatar3} name="Karianne Beaubien" job="Intervenante" />
+          <Member image={avatar4} name="Débora Demers" job="Intervenante" />
+          <Member
+            image={avatar5}
+            name="Nancy Gosselin"
+            job="Adjointe administrative"
+          />
         </div>
       </div>
       <div className="mx-4 flex flex-col items-center justify-center border-b border-gray-100 bg-white py-12 sm:mx-6 md:mx-16 lg:py-20">
